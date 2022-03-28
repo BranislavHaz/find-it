@@ -1,0 +1,47 @@
+.table-indicator {
+  width: 3em;
+  height: 20em;
+  margin-top: 1em;
+  outline: 0.2em solid #000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #b71;
+  display: flex;
+  position: relative;
+  flex-direction: column-reverse;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.level {
+  width: 3em;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  background-color: #fbba1c;
+  content: "";
+  float: right;
+  transition: height 3s, clip-path 0.5s;
+  animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    clip-path: polygon(0 0.3em, 100% 0, 100% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0.3em, 100% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0.3em, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #834e00;
+  font-size: 1.9em;
+  letter-spacing: -0.3em;
+  transform: translate(-50%, -50%);
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}

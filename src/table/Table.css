@@ -1,0 +1,7 @@
+.table {
+  margin-top: 3em;
+  padding-top: 2em;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
